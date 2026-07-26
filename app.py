@@ -1,14 +1,9 @@
-import os
 import streamlit as st
-from dotenv import load_dotenv
 from groq import Groq
 
 
-# Load API key
-load_dotenv()
-
 client = Groq(
-    api_key=os.getenv("GROQ_API_KEY")
+    api_key=st.secrets["GROQ_API_KEY"]
 )
 
 
